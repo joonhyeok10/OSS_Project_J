@@ -1,4 +1,4 @@
-remote repository of git_tutorial
+remote repository of 20144783
 git add README.md
-remote repository of git_tutorial
 #joonhyeok10
+//project_j
