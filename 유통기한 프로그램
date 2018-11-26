@@ -40,18 +40,18 @@ public class Main {
 		}
 
 		public void Insert() {
-			JFrame frm=new JFrame("Á¦Ç° ÀÔ·Â");	
+			JFrame frm=new JFrame("ì œí’ˆ ì…ë ¥");	
 			frm.setBounds(120, 120, 250, 270);
 			frm.setLayout(new FlowLayout());
 
 			JTextArea textArea=new JTextArea(10,20);
-			textArea.setText("¿¹½Ã)ÃÊÄÚ¼Û/2018/12/12\n");
+			textArea.setText("ì˜ˆì‹œ)ì´ˆì½”ì†¡/2018/12/12\n");
 
 			textArea.setLineWrap(true);
 			textArea.setWrapStyleWord(true);
 
 
-			JButton btn=new JButton("Ãß°¡");
+			JButton btn=new JButton("ì¶”ê°€");
 
 			btn.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
@@ -71,7 +71,7 @@ public class Main {
 	}
 
 	void FULLGUI() {
-		mainFrame = new Frame("À¯Åë±âÇÑ °ü¸® ½Ã½ºÅÛ");
+		mainFrame = new Frame("ìœ í†µê¸°í•œ ê´€ë¦¬ ì‹œìŠ¤í…œ");
 		mainFrame.setSize(500, 800);
 		mainFrame.setLayout(new GridLayout(4, 1));
 		mainFrame.addWindowListener(new WindowAdapter() {
@@ -83,7 +83,7 @@ public class Main {
 
 		headerLabel = new Label();
 		headerLabel.setAlignment(Label.CENTER);
-		headerLabel.setText("±âÇÑÀÌ ³²¾Æ ÀÖ´Â Á¦Ç°<<<>>>Á¤¸® ÇØ¾ß ÇÒ Á¦Ç°");
+		headerLabel.setText("ê¸°í•œì´ ë‚¨ì•„ ìˆëŠ” ì œí’ˆ<<<>>>ì •ë¦¬ í•´ì•¼ í•  ì œí’ˆ");
 
 		controlPanel = new Panel();
 		controlPanel.setLayout(new FlowLayout());
@@ -99,29 +99,29 @@ public class Main {
 
 	public void showList() {
 		
-		List LatestProducts = new List(10, true); // ±âÇÑÀÌ ³²Àº Á¦Ç° ¸ñ·Ï
-			LatestProducts.add("°¨ÀÚ");
+		List LatestProducts = new List(10, true); // ê¸°í•œì´ ë‚¨ì€ ì œí’ˆ ëª©ë¡
+			LatestProducts.add("ê°ì");
 		
 
-		List Oldproducts = new List(10, true); // ¿À·¡µÈ Á¦Ç° ¸ñ·Ï
+		List Oldproducts = new List(10, true); // ì˜¤ë˜ëœ ì œí’ˆ ëª©ë¡
 		
 
 		//JTextField Insertproducts = new JTextField();
 
-		Button insertButton = new Button("Ãß°¡");	 // Ãß°¡ÇÒ ¶§ ¹öÆ°
-		Button deleteButton = new Button("»èÁ¦"); // »èÁ¦ÇÒ ¶§ ¹öÆ°
+		Button insertButton = new Button("ì¶”ê°€");	 // ì¶”ê°€í•  ë•Œ ë²„íŠ¼
+		Button deleteButton = new Button("ì‚­ì œ"); // ì‚­ì œí•  ë•Œ ë²„íŠ¼
 
-		insertButton.addActionListener(new ActionListener() { // Ãß°¡ ¹öÆ° ´­·¶À» ¶§ÀÇ ¸í·É
+		insertButton.addActionListener(new ActionListener() { // ì¶”ê°€ ë²„íŠ¼ ëˆŒë €ì„ ë•Œì˜ ëª…ë ¹
 			public void actionPerformed(ActionEvent e) {
-				// Ãß°¡¹öÆ°
+				// ì¶”ê°€ë²„íŠ¼
 				Insert Insert = new Insert();
 			}
 		});
 
-		deleteButton.addActionListener(new ActionListener() { // »èÁ¦ ¹öÆ° ´­·¶À» ¶§ÀÇ ¸í·É
+		deleteButton.addActionListener(new ActionListener() { // ì‚­ì œ ë²„íŠ¼ ëˆŒë €ì„ ë•Œì˜ ëª…ë ¹
 			public void actionPerformed(ActionEvent e) {
-				// »èÁ¦¹öÆ°
-				// ´ÜÀÏ ¸®½ºÆ® »èÁ¦
+				// ì‚­ì œë²„íŠ¼
+				// ë‹¨ì¼ ë¦¬ìŠ¤íŠ¸ ì‚­ì œ
 				if(LatestProducts.getSelectedIndex()!=-1)
 					LatestProducts.remove(LatestProducts.getSelectedIndex());
 
@@ -130,10 +130,10 @@ public class Main {
 			}
 		});
 
-		controlPanel.add(LatestProducts); 	// »õ·Î¿î Á¦Ç° ¸ñ·Ï
-		controlPanel.add(Oldproducts); 		// ¿À·¡µÈ Á¦Ç° ¸ñ·Ï
-		buttonPanel.add(insertButton); 		// Ãß°¡ÇÒ ¶§ ¹öÆ°
-		buttonPanel.add(deleteButton); 		// »èÁ¦ÇÒ ¶§ ¹öÆ°
+		controlPanel.add(LatestProducts); 	// ìƒˆë¡œìš´ ì œí’ˆ ëª©ë¡
+		controlPanel.add(Oldproducts); 		// ì˜¤ë˜ëœ ì œí’ˆ ëª©ë¡
+		buttonPanel.add(insertButton); 		// ì¶”ê°€í•  ë•Œ ë²„íŠ¼
+		buttonPanel.add(deleteButton); 		// ì‚­ì œí•  ë•Œ ë²„íŠ¼
 	}
 
 	public static void main(String[] args) {
